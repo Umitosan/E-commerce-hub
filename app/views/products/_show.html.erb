@@ -1,1 +1,3 @@
-<%= @product.description %>
+<p><%= @product.description %></p>
+
+<%= image_tag("#{@product.image_url}", :alt => "product image", :id => "prod_thumb") %>
