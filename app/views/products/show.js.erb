@@ -1,3 +1,6 @@
 
-
-$("#product_detail_" + <%= @product.id %>).html("<%= j render(partial: 'show') %>");
+if ($("#product_desc_" + <%= @product.id %>).length == 0) {
+  $("#product_detail_" + <%= @product.id %>).html("<%= j render(partial: 'show') %>");
+} else {
+  $("#product_detail_" + <%= @product.id %>).html("");
+}
