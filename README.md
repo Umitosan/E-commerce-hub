@@ -12,9 +12,9 @@ This web-app is intended to be an E-Commerce template on which to build a profes
 * As a user, I want to add products to my cart while on the home page.
 * As a user, I want to view a product's details while staying on the same page.
 * As a user, I want the product's details to include at least a name, description, image, and price.
-* As a user, while viewing my car, I want to remove items from the cart by clicking a button and I should see my cart total price update in real-time.
+* As a user, while viewing my cart, I want to remove items from the cart by clicking a button and I should see my cart total price update in real-time.
 
-## Refactoring plan
+## Refactoring and feature goals
 
 * Generally: Use AJAX to keep the user experience  as seamless as possible
 * Ensure that users can't order a negative number of items.
@@ -31,6 +31,14 @@ This web-app is intended to be an E-Commerce template on which to build a profes
 * Add admin flash messages for adding, updating and deleting products.
 * Add admin links to navbar so admins can easily add, update and delete products.
 * Add integration testing for AJAX functionality.
+
+## Features completed
+
+* Users can add products the their cart from the home page
+* Users can view a product's details on the main page
+* Added an image to each product's details
+* Users can remove items from their cart more seamlessly than before
+* Added flash messages for clarity and friendliness. These show on sign in, sign up, and sign out.
 
 ## Prerequisites
 

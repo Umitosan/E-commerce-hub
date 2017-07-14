@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :admin
   helper_method :current_order
+  # helper_method :check_quantiy
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -19,4 +20,12 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to '/sign_in' unless admin
   end
+
+  # def check_quantiy
+  #   if (item_params['quantity'] == "") || (item_params['quantity'].to_i < 1)
+  #     flash[:alert] = "please enter a quantity greater than zero"
+  #     redirect_to '/'
+  #   end
+  # end
+
 end

@@ -1,4 +1,5 @@
 class OrderItemsController < ApplicationController
+  # before_action :check_quantiy, only: [:create]
 
   def create
     @order = current_order
