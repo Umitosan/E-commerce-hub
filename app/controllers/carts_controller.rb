@@ -14,7 +14,7 @@ class CartsController < ApplicationController
       redirect_to cart_path
     else
       flash[:alert] = "You need to sign up or sign in to complete your order."
-      redirect_to sign_in_path
+      redirect_to new_user_session_path
     end
   end
 
