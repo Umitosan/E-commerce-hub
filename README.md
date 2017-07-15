@@ -42,6 +42,7 @@ This web-app is intended to be an E-Commerce template on which to build a profes
 * Added flash messages for clarity and friendliness. These show on sign in, sign up, and sign out.
 * Restricted quantity input field for products to only allow whole numbers between 1-100.
 * Improved product page column heights to be more consistent and responsive
+* Replaced Bcrypt with Devise authentication for better security and easier user management
 
 ## Prerequisites
 
