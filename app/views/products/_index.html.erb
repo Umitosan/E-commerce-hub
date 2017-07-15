@@ -1,18 +1,11 @@
 
 <div class="row main-prod-row">
-
   <% @products.each_with_index do |product, i| %>
-
     <% if ((i % 3) == 0) %>
-
       <div class="row prod-row">
-
         <% 3.times do |j| %>
-
           <% if @products[i+j] %>
-
               <div class="col col-xs-4">
-                <%# binding.pry %>
                 <h4><%= link_to @products[i+j].name, product_path(@products[i+j]), remote: true %></h4>
                 <p><%= number_to_currency @products[i+j].price %></p>
                 <div id="product_detail_<%= @products[i+j].id %>">
@@ -23,15 +16,9 @@
                   <span class="waves-effect waves-light btn"><%= f.submit "Add to cart" %></span>
                 <% end %>
               </div>
-
           <% end %>
-
         <% end %>
-
       </div>
-
     <% end %>
-
   <% end %>
-
 </div>
