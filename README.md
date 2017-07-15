@@ -35,11 +35,13 @@ This web-app is intended to be an E-Commerce template on which to build a profes
 ## Features completed
 
 * Users can add products the their cart from the home page
-* Users can view a product's details on the main page
+* Users can show/hide a product's details on the main page
 * Added an image to each product's details
 * Users can remove items from their cart more seamlessly than before
+
 * Added flash messages for clarity and friendliness. These show on sign in, sign up, and sign out.
 * Restricted quantity input field for products to only allow whole numbers between 1-100.
+* Improved product page column heights to be more consistent and responsive
 
 ## Prerequisites
 
