@@ -47,3 +47,5 @@ class Seed
 end
 
 Seed.begin
+
+# https://tinyurl.com/ya6png87

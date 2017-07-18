@@ -1,0 +1,22 @@
+
+<div id="product_form">
+
+  <%= render('layouts/errors', :object => @product ) %>
+
+  <%= form_for @product do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br><br>
+    <%= f.label :price %>
+    <%= f.number_field :price, :class => 'text_field', :step => 0.01 %>
+    <br><br>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <br><br>
+    <span class="waves-effect waves-light btn prod_form_btn"><%= f.submit %></span>
+  <% end %>
+
+</div>

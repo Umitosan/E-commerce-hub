@@ -16,12 +16,17 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    respond_to do |format|
+      format.html { redirect_to products_url }
+      format.js
+    end
   end
 
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to '/'
+    flash[:notice] = "Product successfully added!"
+      redirect_to  products_path
     else
       render :new
     end
@@ -29,6 +34,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :description, :price)
+    params.require(:product).permit(:name, :description, :price, :image_url)
   end
 end

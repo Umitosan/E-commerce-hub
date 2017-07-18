@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
-  helper_method :admin
+  helper_method :is_admin?
   helper_method :current_order
   helper_method :current_order_itmes_total
   helper_method :current_order_price
 
-  def admin
+  def is_admin?
     current_user && current_user.admin
   end
 
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    redirect_to new_user_session_path unless admin
+    redirect_to new_user_session_path unless is_admin?
   end
 
   def current_order_itmes_total
