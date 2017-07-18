@@ -8,12 +8,14 @@
               <div class="col col-xs-4">
                 <h4><%= link_to @products[i+j].name, product_path(@products[i+j]), remote: true %></h4>
                 <% if is_admin? %>
-                  <span class="admin_links"><%= link_to "Edit", edit_product_path(product) %> | </span>
-                  <span class="admin_links"><%= link_to "Delete", product_path(product), :method => "delete" %></span>
+                  <span class="admin_links"><%= link_to "Edit", edit_product_path(@products[i+j]), remote:true %> | </span>
+                  <span class="admin_links"><%= link_to "Delete", product_path(@products[i+j]), :method => "delete", remote:true %></span>
                 <% end %>
                 <br><br>
                 <p><%= number_to_currency @products[i+j].price %></p>
                 <div id="product_detail_<%= @products[i+j].id %>">
+                </div>
+                <div id="edit_product_area_<%= @products[i+j].id %>">
                 </div>
                 <%= form_for @order_item, remote: true do |f| %>
                   <%= f.hidden_field :product_id, value: @products[i+j].id %>
