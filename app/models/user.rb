@@ -7,14 +7,8 @@ class User < ApplicationRecord
 
   has_many :orders
 
-  after_create :save_account
-
   def previous_orders
     self.orders.where(status: 2).includes(order_items: :product)
-  end
-
-  def save_account
-    Account.create(user_id: self.id)
   end
 
 end

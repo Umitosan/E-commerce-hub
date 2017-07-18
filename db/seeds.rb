@@ -6,11 +6,18 @@ class Seed
     seed.clean_db
     seed.generate_products
     seed.generate_users
+    p "Created #{User.count} users"
+    p "Created #{Product.count} products"
   end
 
   def clean_db
+    usersBefore = User.count
+    productsBefore = Product.count
     User.destroy_all
     Product.destroy_all
+    p "Deleted #{usersBefore} users"
+    p "Deleted #{productsBefore} products"
+    p "====================================="
   end
 
   def generate_users
